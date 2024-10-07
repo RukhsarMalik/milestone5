@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="container-heading">DYNAMIC RESUME BUILDER</h1>
+        <form id="resumeForm" >
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="items">
+                    <label for="name">Full Name: </label> 
+                    <input type="text" name="name" id="name" placeholder="Bill Gates" required>
+                </div>
+                
+                <div class="items">
+                    <label for="photo">Upload Your Profile Picture:</label>
+                    <input type="file" name="Photo" id="photo" required>
+                </div>
+                
+                <div class="items">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="billgates@gmail.com" required>
+                </div>
+
+                <div class="items">
+                    <label for="phoneNumber">Phone No:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="03123456789" required>
+                </div>
+
+                <div class="items">
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" placeholder="House No XYZ " required>
+                </div>
+
+                <div class="items">
+                    <label for="linkedin-id">LinkedIn ID (if any):</label>
+                    <input type="text" name="linkedin-id" id="linkedin-id" placeholder="www.LinkedIn/billgates">
+                </div>
+
+            </fieldset>
+
+            <fieldset id="educationSection">
+                <legend>Education</legend>
+
+                <div id="education-group" class="education-group">
+
+                    <div class="items">
+                        <label for="degree-1">Degree:</label>
+                        <input type="text" name="degree" id="degree-1" placeholder="BSCS">
+                    </div>
+
+                    <div class="items">
+                        <label for="institute-1">Institute:</label>
+                        <input type="text" name="institute" id="institute-1" placeholder="ABC University">
+                    </div>
+
+                    <div class="items">
+                        <label for="year-1">Passing Year:</label>
+                        <input type="text" name="year" id="year-1" placeholder="2015-2018">
+                    </div>
+                </div>
+                <div class="addEducationButton">
+                    <button  type="button" id="addEducationButton">Add More Education</button>
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset id="workExperienceSection">
+                <legend>Work Experience</legend>
+                <div id="experience-group" class="experience-group">
+                    <div class="items">
+                        <label for="company-1">Company: </label>
+                        <input type="text" name="company" id="company-1" placeholder="XYZ company">
+                    </div>
+        
+                    <div class="items">
+                            
+                        <label for="position-1">Position:</label>
+                        <input type="text" name="position" id="position-1" placeholder="Software Engineer">
+                    </div>
+        
+                    <div class="items">
+                        <label for="duration-1">Duration:</label>
+                        <input type="text" name="duration" id="duration-1" placeholder="2015-2019">
+                    </div>
+        
+                    <div class="items">
+                         <label for="responsibility-1">Responsibilities:</label>
+                         <input type="text" name="responsibility" id="responsibility-1" placeholder="Developed Software">
+                    </div>
+                </div>
+                <div class="addExperienceButton">
+                    <button  type="button" id="addExperienceButton">Add More Experience</button>
+                </div>
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+
+                <div class="skill-category">
+                    
+                    <input type="text" name="skill" id="skill1">
+                    
+                    <input type="text" name="skill" id="skill2">
+
+                    <input type="text" name="skill" id="skill3">
+                    
+                    <input type="text" name="skill" id="skill4">
+
+                </div>
+
+
+            </fieldset>
+            <div class="generate-button">
+                <button>Generate Resume</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="resumePage" class="resume-page hidden">
+        <div id="resumeContent" class="resume-content">
+            <img id="resumePhoto" class="resume-photo" src="" alt="">
+            <h1 id="resumeName" class="resume-name"></h1>
+            <h2>Personal Information</h2>
+            <p id="resumeEmail"></p>
+            <p id="resumePhone" class="resumePhone">  </p>
+            <p id="resumeAddress"></p>
+            <p id="resumeLinkedin"> </p>
+            <h2>Education</h2>
+            <p id="resumeEducation"></p>
+            <h2>Work Experience</h2>
+            <p id="resumeWorkExperience"></p>
+            <h2>Skills</h2>
+            <p id="resumeSkills"></p>
+
+        </div>
+
+        <button id="editButton" class="editButton">Edit</button>
+        <button id="shareButton" class="shareButton">Share</button>
+        <button id="downloadButton" class="downloadButton">Download</button>
+
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
